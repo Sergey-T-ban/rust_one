@@ -1,5 +1,6 @@
 //ch10.1(3)
 // Define a struct Point with a generic type T
+#[allow(dead_code)]
 struct Point<T> {
     x: T,
     y: T,
@@ -7,30 +8,31 @@ struct Point<T> {
 #[test]
 fn cp10_1() {
     // Create an instance of Point with integers
-    let integer = Point { x: 5, y: 10 };
+    let _integer = Point { x: 5, y: 10 };
 
     // Create an instance of Point with floating point numbers
-    let float = Point { x: 1.0, y: 4.0 };
+    let _float = Point { x: 1.0, y: 4.0 };
 
     // Print success message
     println!("Success!");
 }
 
 //ch10.2(2)
+#[allow(dead_code)]
 struct Array<T, const N: usize> {
     data: [T; N],
 }
 #[test]
 fn cp10_2() {
-    let array_int = Array {
+    let _array_int = Array {
         data: [1, 2, 3],
     };
 
-    let array_float = Array {
+    let _array_float = Array {
         data: [1.0, 2.0, 3.0],
     };
 
-    let array_short = Array {
+    let _array_short = Array {
         data: [1, 2],
     };
 
@@ -82,12 +84,14 @@ trait Bird {
 
 struct Duck;
 impl Duck {
+    #[allow(dead_code)]
     fn fly(&self) {
         println!("Look, the duck is flying")
     }
 }
 struct Swan;
 impl Swan {
+    #[allow(dead_code)]
     fn fly(&self) {
         println!("Look, the duck.. oh sorry, the swan is flying")
     }

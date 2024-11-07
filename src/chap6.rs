@@ -16,7 +16,7 @@ fn cp6_2() {
     let names = [String::from("Sunfei"), "Sunface".to_string()];
 
     // `Get` returns an Option<T>, it's safe to use
-    let name0 = names.get(0).unwrap();
+    let _name0 = names.get(0).unwrap();
 
     // Use get to safely access the array
     let name1 = names.get(2);
@@ -82,6 +82,7 @@ fn cp6_5() {
 }
 
 //ch6.6(3)
+#[allow(dead_code)]
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
